@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/2023jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        #show_sql: true system.out으로 찍음
+
+logging:
+  level:
+    org.hibernate.SQL: debug #로거를 통해서 찍음
+    org.hibernate.type: trace #이부분 추가
